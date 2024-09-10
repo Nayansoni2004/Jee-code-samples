@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <form action="act.do">
+        <table border="1" align="center" width="30%">
+            <tr>
+                <td>
+                    <label for="">Gender</label>
+                </td>
+                <td>
+                    <label for="genm">Male</label>
+                    <input type="radio" name="gender" value="m" id="genm"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    <label for="genf">Female</label>
+                    <input type="radio" name="gender" checked value="f" id="genf">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Food</label>
+                </td>
+                <td>
+                    <label for="samo">Samosa</label>
+                    <input type="checkbox" name="food" checked value="samo" id="samo"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    <label for="ketcho">Kachodi</label>
+                    <input type="checkbox" name="food" value="kacho" id="ketcho"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    <label for="jebi">Jalebi</label>
+                    <input type="checkbox" name="food" checked value="jebi" id="jebi"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="city">City</label>
+                </td>
+                <td>
+                    <select name="city" id="city" multiple>
+                        <option>Select City</option>
+                        <option>Jabalpur</option>
+                        <option>Jagdalpur</option>
+                        <option selected>Jaipur</option>
+                        <option>Nagpur</option>
+                        <option>Kanpur</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Save">
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>
