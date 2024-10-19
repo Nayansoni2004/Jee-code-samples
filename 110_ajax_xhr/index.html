@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Index Page</h1>
+
+    <hr>
+
+    <button type="button" id="btn">Records</button>
+
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        const btn = document.querySelector('#btn');
+
+        const lis = document.querySelectorAll('li');
+
+        btn.addEventListener('click', () => {
+            const req = new XMLHttpRequest();
+
+            req.open('get', 'records.do', true);
+
+            req.addEventListener('readystatechange', () => {
+                if(req.readyState==4 && req.status==200) {
+                    const res = JSON.parse(req.responseText);
+
+                    let i = 0;
+                    for(let prop in res) {
+                        lis[i++].innerText = res[prop];
+                    }
+                }
+            });
+
+            req.send();
+        });
+    </script>
+</body>
+</html>
