@@ -1,0 +1,14 @@
+create database authenticatedb;
+
+use authenticatedb;
+
+create table users
+(
+    user_id int auto_increment primary key,
+    full_name char(35) not null,
+    email char(255) not null unique,
+    password char(255) not null,
+    gender char(1),
+    city char(60),
+    address varchar(500)
+);
