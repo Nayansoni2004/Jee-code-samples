@@ -1,0 +1,10 @@
+body {
+    font-family: Verdana;
+}
+
+#main_container {
+    max-width: 1800px;
+    width: 95%;
+    /* border: 3px solid purple; */
+    margin: 0px auto;
+}
